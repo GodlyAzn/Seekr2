@@ -7,37 +7,12 @@
     tools:context="com.example.samuel.seekrhome.MainActivity"
     android:id="@+id/drawer"
     android:background="@drawable/homebg">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/button"
-            android:text="Follow"
-            android:textColor="#fff"
-            tools:layout_editor_absoluteX="92dp"
-            tools:layout_editor_absoluteY="373dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="83dp" />
-    </RelativeLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:id="@+id/flcontent"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </LinearLayout>
     <android.support.design.widget.NavigationView
         app:headerLayout="@layout/header"
         app:itemTextColor="#fff"
         app:itemIconTint="#fff"
         android:id="@+id/nv"
-        android:background="@drawable/background"
+        android:background="@drawable/background1"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:menu="@menu/drawermenu"
