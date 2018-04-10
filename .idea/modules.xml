@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SeekrHome.iml" filepath="$PROJECT_DIR$/SeekrHome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seekr2.iml" filepath="$PROJECT_DIR$/Seekr2.iml" />
+      <module fileurl="file://C:\Users\rekz\Documents\GitHub\Seekr2\SeekrHome.iml" filepath="C:\Users\rekz\Documents\GitHub\Seekr2\SeekrHome.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
