@@ -101,3 +101,4 @@ public class Settings extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 }
+
