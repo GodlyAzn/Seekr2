@@ -1,8 +1,4 @@
 <resources>
-    <string name="app_name">SeekrHome</string>
-    <string name="Open">Open</string>
-    <string name="Close">Close</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">SeekrMap</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
