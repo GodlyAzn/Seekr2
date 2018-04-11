@@ -18,6 +18,12 @@
         app:menu="@menu/drawermenu"
         android:layout_gravity="start"
         >
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/flcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </LinearLayout>
         <ImageView
             android:layout_gravity="bottom"
             android:background="@drawable/z"
