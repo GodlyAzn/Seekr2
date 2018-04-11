@@ -7,6 +7,12 @@
     tools:context="com.example.samuel.seekrhome.MainActivity"
     android:id="@+id/drawer"
     android:background="@drawable/homebg">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/flcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </LinearLayout>
     <android.support.design.widget.NavigationView
         app:headerLayout="@layout/header"
         app:itemTextColor="#fff"
@@ -18,12 +24,6 @@
         app:menu="@menu/drawermenu"
         android:layout_gravity="start"
         >
-        <LinearLayout
-            android:orientation="vertical"
-            android:id="@+id/flcontent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </LinearLayout>
         <ImageView
             android:layout_gravity="bottom"
             android:background="@drawable/z"
