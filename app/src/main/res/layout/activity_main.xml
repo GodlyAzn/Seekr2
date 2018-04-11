@@ -12,7 +12,7 @@
         app:itemTextColor="#fff"
         app:itemIconTint="#fff"
         android:id="@+id/nv"
-        android:background="@drawable/background1"
+        android:background="@drawable/background"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:menu="@menu/drawermenu"
