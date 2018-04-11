@@ -1,4 +1,4 @@
-package com.example.samuel.seekrhome;
+package com.example.seekr;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

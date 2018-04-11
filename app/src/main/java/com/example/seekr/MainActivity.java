@@ -1,4 +1,4 @@
-package com.example.samuel.seekrhome;
+package com.example.seekr;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -17,11 +17,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        dl = (DrawerLayout) findViewById(R.id.drawer);
-        toggle = new ActionBarDrawerToggle(this,dl,R.string.Open,R.string.Close);
+        setContentView(com.example.samuel.seekrhome.R.layout.activity_main);
+        dl = (DrawerLayout) findViewById(com.example.samuel.seekrhome.R.id.drawer);
+        toggle = new ActionBarDrawerToggle(this,dl, com.example.samuel.seekrhome.R.string.Open, com.example.samuel.seekrhome.R.string.Close);
         dl.addDrawerListener(toggle);
-        NavigationView nvDrawer = (NavigationView) findViewById(R.id.nv);
+        NavigationView nvDrawer = (NavigationView) findViewById(com.example.samuel.seekrhome.R.id.nv);
         toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setupDrawerContent(nvDrawer);
@@ -31,23 +31,23 @@ public class MainActivity extends AppCompatActivity {
         Fragment myFragment = null;
         Class fragmentClass;
         switch (menuItem.getItemId()){
-            case R.id.home:
+            case com.example.samuel.seekrhome.R.id.home:
                 fragmentClass = Home.class;
                 break;
 
-            case R.id.event:
+            case com.example.samuel.seekrhome.R.id.event:
                 fragmentClass = Event.class;
                 break;
 
-            case R.id.account:
+            case com.example.samuel.seekrhome.R.id.account:
                 fragmentClass = Account.class;
                 break;
 
-            case R.id.search:
+            case com.example.samuel.seekrhome.R.id.search:
                 fragmentClass = Search.class;
                 break;
 
-            case R.id.setting:
+            case com.example.samuel.seekrhome.R.id.setting:
                 fragmentClass = Settings.class;
                 break;
 
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.flcontent,myFragment).commit();
+        fragmentManager.beginTransaction().replace(com.example.samuel.seekrhome.R.id.flcontent,myFragment).commit();
         menuItem.setChecked(true);
         setTitle(menuItem.getTitle());
         dl.closeDrawers();

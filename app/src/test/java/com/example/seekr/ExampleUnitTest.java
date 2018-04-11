@@ -1,4 +1,4 @@
-package com.example.samuel.seekrhome;
+package com.example.seekr;
 
 import org.junit.Test;
 
