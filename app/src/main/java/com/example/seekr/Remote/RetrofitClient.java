@@ -1,4 +1,4 @@
-package com.example.jared.seekrmap.Remote;
+package com.example.seekr.Remote;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

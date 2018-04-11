@@ -1,10 +1,10 @@
-package com.example.jared.seekrmap.Model;
+package com.example.seekr.Model;
 
 /**
  * Created by jared on 3/23/2018.
  */
 
-public class Southwest {
+public class Location {
     private String lng;
 
     private String lat;

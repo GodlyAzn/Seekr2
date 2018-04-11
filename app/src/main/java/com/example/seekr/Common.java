@@ -1,7 +1,7 @@
-package com.example.jared.seekrmap;
+package com.example.seekr;
 
-import com.example.jared.seekrmap.Remote.IGoogleAPIService;
-import com.example.jared.seekrmap.Remote.RetrofitClient;
+import com.example.seekr.Remote.IGoogleAPIService;
+import com.example.seekr.Remote.RetrofitClient;
 
 /**
  * Created by jared on 3/23/2018.

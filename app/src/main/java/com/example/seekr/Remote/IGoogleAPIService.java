@@ -1,6 +1,6 @@
-package com.example.jared.seekrmap.Remote;
+package com.example.seekr.Remote;
 
-import com.example.jared.seekrmap.Model.MyPlaces;
+import com.example.seekr.Model.MyPlaces;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

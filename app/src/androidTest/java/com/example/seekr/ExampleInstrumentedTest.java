@@ -1,4 +1,4 @@
-package com.example.samuel.seekrhome;
+package com.example.seekr;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.samuel.seekrhome", appContext.getPackageName());
+        assertEquals("com.example.seekr", appContext.getPackageName());
     }
 }

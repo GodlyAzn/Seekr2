@@ -1,4 +1,4 @@
-package com.example.jared.seekrmap.Model;
+package com.example.seekr.Model;
 
 /**
  * Created by jared on 3/23/2018.

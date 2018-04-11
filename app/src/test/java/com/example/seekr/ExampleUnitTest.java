@@ -1,4 +1,4 @@
-package com.example.jared.seekrmap;
+package com.example.seekr;
 
 import org.junit.Test;
 
