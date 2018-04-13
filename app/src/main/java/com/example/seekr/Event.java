@@ -24,7 +24,7 @@ public class Event extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     //sharebutton
-    private void ShareActionProvider mShareActionProvider
+    //private void ShareActionProvider mShareActionProvider
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -67,7 +67,7 @@ public class Event extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(com.example.samuel.seekrhome.R.layout.fragment_event, container, false);
+        return inflater.inflate(com.example.seekr.R.layout.fragment_event, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.example.samuel.seekrhome.R.layout.activity_main);
+        setContentView(com.example.seekr.R.layout.activity_main);
         dl = (DrawerLayout) findViewById(com.example.samuel.seekrhome.R.id.drawer);
         toggle = new ActionBarDrawerToggle(this,dl, com.example.samuel.seekrhome.R.string.Open, com.example.samuel.seekrhome.R.string.Close);
         dl.addDrawerListener(toggle);
