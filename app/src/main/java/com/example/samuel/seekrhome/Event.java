@@ -120,7 +120,11 @@ public class Event extends Fragment {
                 Intent myIntent = new Intent(Intent.ACTION_SEND);
                 myIntent.setType("text/plain");
                 String shareBody = "Your body here";
-                Sring
+                String shareSub = "Tour subject here";
+                myIntent.putExtra(Intent.EXTRA_SUBJECT,shareBody);
+                myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+                startActivity(Intent.createChooser(myIntent)"Share using"
+                e.);
             }
         });
     }
