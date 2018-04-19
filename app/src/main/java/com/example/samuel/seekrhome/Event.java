@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -32,8 +33,8 @@ public class Event extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
-    //share button
-    private ShareActionProvider mShareActionProvider;
+
+
 
     public Event() {
         // Required empty public constructor
@@ -107,25 +108,21 @@ public class Event extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
+    Button bt;
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate menu resource file.
-        getMenuInflater().inflate(R.menu.share_menu, menu);
-
-        // Locate MenuItem with ShareActionProvider
-        MenuItem item = menu.findItem(R.id.menu_item_share);
-
-        // Fetch and store ShareActionProvider
-        mShareActionProvider = (ShareActionProvider) item.getActionProvider();
-
-        // Return true to display menu
-        return true;
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreateView(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        bt=(Button)findViewById(R.id.button);
+        bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(Intent.ACTION_SEND);
+                myIntent.setType("text/plain");
+                String shareBody = "Your body here";
+                Sring
+            }
+        });
     }
 
-    // Call to update the share intent
-    private void setShareIntent(Intent shareIntent) {
-        if (mShareActionProvider != null) {
-            mShareActionProvider.setShareIntent(shareIntent);
-        }
-    }
 }
