@@ -64,7 +64,7 @@ public class Settings extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(com.example.samuel.seekrhome.R.layout.fragment_settings, container, false);
+        return inflater.inflate(com.example.seekr.R.layout.fragment_settings, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
