@@ -35,6 +35,7 @@ public class Event extends Fragment {
         // Required empty public constructor
     }
 
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -52,6 +53,8 @@ public class Event extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+    //button
+    Button rk;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -59,6 +62,11 @@ public class Event extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+
+        super.onCreate(Bundle savedInstanceState);
+        setContentView(R.layout.activity_main);
+        rk=(Button)findViewById(R.id.button)
         }
     }
 
