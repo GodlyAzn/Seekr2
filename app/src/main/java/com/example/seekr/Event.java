@@ -1,6 +1,7 @@
 package com.example.seekr;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -53,8 +54,9 @@ public class Event extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-    //button
-    Button rk;
+
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -63,12 +65,30 @@ public class Event extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+    }
 
-        super.onCreate(Bundle savedInstanceState);
+    Button rk;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        rk=(Button)findViewById(R.id.button)
+        rk=(Button)findViewById(R.id.button);
+        rk.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent myIntent = new Intent(Intent.ACTION_SEND);
+                myIntent.setType("text/plain");
+                String shareBody = "Your Body Here";
+                String shareSub = "Your Subject here";
+                myIntent.putExtra(Intent.EXTRA_SUBJECT, shareBody);
+                myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+                startActivity(Intent.createChooser(myIntent,"share using"));
+            }
         }
     }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
