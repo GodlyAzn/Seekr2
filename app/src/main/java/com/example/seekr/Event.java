@@ -69,7 +69,7 @@ public class Event extends Fragment {
 
     Button rk;
     @Override
-    public void onCreate(Bundle savedInstanceState){
+    public void onCreate (Bundle savedInstanceState){
         setContentView(R.layout.activity_main);
         rk=(Button)findViewById(R.id.button);
         rk.setOnClickListener(new View.OnClickListener() {
