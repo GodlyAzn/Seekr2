@@ -57,10 +57,10 @@ public class Event extends Fragment {
 
 
 
-
     @Override
-    public void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -68,15 +68,13 @@ public class Event extends Fragment {
     }
 
     Button rk;
-
     @Override
     public void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         rk=(Button)findViewById(R.id.button);
-        rk.setOnClickListener(new View.OnClickListener(){
+        rk.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 Intent myIntent = new Intent(Intent.ACTION_SEND);
                 myIntent.setType("text/plain");
                 String shareBody = "Your Body Here";
@@ -84,9 +82,13 @@ public class Event extends Fragment {
                 myIntent.putExtra(Intent.EXTRA_SUBJECT, shareBody);
                 myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
                 startActivity(Intent.createChooser(myIntent,"share using"));
+
             }
-        }
+        });
     }
+
+
+
 
 
 
