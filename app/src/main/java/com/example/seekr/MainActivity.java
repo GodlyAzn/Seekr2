@@ -20,8 +20,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.example.seekr.R.layout.activity_main);
+<<<<<<< HEAD
         dl = (DrawerLayout) findViewById(com.example.seekr.R.id.drawer);
         toggle = new ActionBarDrawerToggle(this,dl, com.example.seekr.R.string.Open, com.example.seekr.R.string.Close);
+=======
+        dl = (DrawerLayout) findViewById(com.example.samuel.seekrhome.R.id.drawer);
+        toggle = new ActionBarDrawerToggle(this,dl, com.example.samuel.seekrhome.R.string.Open, com.example.samuel.seekrhome.R.string.Close);
+>>>>>>> Samuel
         dl.addDrawerListener(toggle);
         NavigationView nvDrawer = (NavigationView) findViewById(com.example.seekr.R.id.nv);
         toggle.syncState();
