@@ -75,5 +75,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    //main
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (toggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+
+    }
 
 }
