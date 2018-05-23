@@ -46,10 +46,10 @@ public class MainActivity extends AppCompatActivity {
             case com.example.seekr.R.id.account:
                 fragmentClass = Account.class;
                 break;
-
-            case com.example.seekr.R.id.search:
-                fragmentClass = Search.class;
-                break;
+            //change
+            //case com.example.seekr.R.id.search:
+                //fragmentClass = Search.class;
+                //break;
 
             case com.example.seekr.R.id.setting:
                 fragmentClass = Settings.class;
