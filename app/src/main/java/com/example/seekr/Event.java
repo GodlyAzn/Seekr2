@@ -99,21 +99,4 @@ public class Event extends Fragment {
     }
 }
 
-//share button
-public class Event2 extends AppCompatActivity{
 
-    Button bt;
-    @Override
-    protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_event);
-        bt=(Button)findViewById(R.id.button);
-        bt.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-               Intent myIntent = new Intent (Intent.ACTION_SEND);
-               myIntent.serTy
-            }
-        }
-    }
-}
