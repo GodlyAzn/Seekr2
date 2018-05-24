@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
+//maybe in use later
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -64,7 +64,7 @@ public class Search extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(com.example.samuel.seekrhome.R.layout.fragment_search, container, false);
+        return inflater.inflate(com.example.seekr.R.layout.fragment_search, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

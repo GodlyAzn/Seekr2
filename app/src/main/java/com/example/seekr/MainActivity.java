@@ -11,17 +11,21 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 
+
+
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout dl;
     private ActionBarDrawerToggle toggle ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.example.samuel.seekrhome.R.layout.activity_main);
-        dl = (DrawerLayout) findViewById(com.example.samuel.seekrhome.R.id.drawer);
-        toggle = new ActionBarDrawerToggle(this,dl, com.example.samuel.seekrhome.R.string.Open, com.example.samuel.seekrhome.R.string.Close);
+        setContentView(com.example.seekr.R.layout.activity_main);
+        dl = (DrawerLayout) findViewById(com.example.seekr.R.id.drawer);
+        toggle = new ActionBarDrawerToggle(this,dl, R.string.Open, R.string.Close);
+        dl = (DrawerLayout) findViewById(com.example.seekr.R.id.drawer);
+        toggle = new ActionBarDrawerToggle(this,dl, com.example.seekr.R.string.Open, com.example.seekr.R.string.Close);
         dl.addDrawerListener(toggle);
-        NavigationView nvDrawer = (NavigationView) findViewById(com.example.samuel.seekrhome.R.id.nv);
+        NavigationView nvDrawer = (NavigationView) findViewById(com.example.seekr.R.id.nv);
         toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setupDrawerContent(nvDrawer);
@@ -31,23 +35,23 @@ public class MainActivity extends AppCompatActivity {
         Fragment myFragment = null;
         Class fragmentClass;
         switch (menuItem.getItemId()){
-            case com.example.samuel.seekrhome.R.id.home:
+            case com.example.seekr.R.id.home:
                 fragmentClass = Home.class;
                 break;
 
-            case com.example.samuel.seekrhome.R.id.event:
+            case com.example.seekr.R.id.event:
                 fragmentClass = Event.class;
                 break;
 
-            case com.example.samuel.seekrhome.R.id.account:
+            case com.example.seekr.R.id.account:
                 fragmentClass = Account.class;
                 break;
+            //change
+            //case com.example.seekr.R.id.search:
+                //fragmentClass = Search.class;
+                //break;
 
-            case com.example.samuel.seekrhome.R.id.search:
-                fragmentClass = Search.class;
-                break;
-
-            case com.example.samuel.seekrhome.R.id.setting:
+            case com.example.seekr.R.id.setting:
                 fragmentClass = Settings.class;
                 break;
 
@@ -61,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(com.example.samuel.seekrhome.R.id.flcontent,myFragment).commit();
+        fragmentManager.beginTransaction().replace(com.example.seekr.R.id.flcontent,myFragment).commit();
         menuItem.setChecked(true);
         setTitle(menuItem.getTitle());
         dl.closeDrawers();
@@ -74,6 +78,15 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+    //main button
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (toggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+
     }
 
 }

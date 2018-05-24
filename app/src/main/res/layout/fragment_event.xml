@@ -7,9 +7,23 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:textSize="60dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Events" />
+        android:text="Events"
+        android:textSize="60dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="75dp"
+            android:text="Share" />
+    </RelativeLayout>
 
 </FrameLayout>
