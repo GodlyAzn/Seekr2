@@ -1,13 +1,15 @@
 package com.example.seekr;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.TextView;
 
 
 public class Event extends Fragment {
@@ -41,13 +43,18 @@ public class Event extends Fragment {
     }
 
     @Override
+    //onCreate
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //setContentView(R.layout.fragment_event);
+        //TextView text = (TextView) findViewById(R.id.textView);
+        //text.setMovementMethod(LinkMovementMethod.getInstance());
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+           mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,13 +63,19 @@ public class Event extends Fragment {
         return inflater.inflate(com.example.seekr.R.layout.fragment_event, container, false);
     }
 
+    public void onViewCreated
+
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
     }
-
+    //testing button
+    //public void twitter(View view){
+        //Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/ChaseRekz"));
+       // startActivity(browserIntent);
+    //}
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);

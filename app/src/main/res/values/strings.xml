@@ -4,5 +4,7 @@
     <string name="Close">Close</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="twitter">Hello blank fragment
+    <a href = "https://twitter.com/ChaseRekz">Developed By: Me</a>
+    </string>
 </resources>
