@@ -60,7 +60,7 @@ public class Event extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(com.example.seekr.R.layout.fragment_event, container, false);
     }
-    
+
     //getView()
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
       TextView text= (TextView) getView().findViewById(R.id.textView);
