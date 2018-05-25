@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
@@ -46,9 +47,6 @@ public class Event extends Fragment {
     //onCreate
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.fragment_event);
-        //TextView text = (TextView) findViewById(R.id.textView);
-        //text.setMovementMethod(LinkMovementMethod.getInstance());
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
            mParam2 = getArguments().getString(ARG_PARAM2);
@@ -62,8 +60,12 @@ public class Event extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(com.example.seekr.R.layout.fragment_event, container, false);
     }
-
-    public void onViewCreated
+    
+    //getView()
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
+      TextView text= (TextView) getView().findViewById(R.id.textView);
+      text.setMovementMethod(LinkMovementMethod.getInstance());
+    }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
