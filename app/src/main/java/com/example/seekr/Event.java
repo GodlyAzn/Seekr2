@@ -4,18 +4,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.TextView;
 
 
 public class Event extends Fragment {
-    //button
-    //Button bt;
-
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -45,17 +43,16 @@ public class Event extends Fragment {
         return fragment;
     }
 
-
     @Override
+    //onCreate
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-         mParam1 = getArguments().getString(ARG_PARAM1);
-         mParam2 = getArguments().getString(ARG_PARAM2);
-
+            mParam1 = getArguments().getString(ARG_PARAM1);
+           mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -64,13 +61,23 @@ public class Event extends Fragment {
         return inflater.inflate(com.example.seekr.R.layout.fragment_event, container, false);
     }
 
+    //getView()
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
+      TextView text= (TextView) getView().findViewById(R.id.textView);
+      text.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
     }
-
+    //testing button
+    //public void twitter(View view){
+        //Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/ChaseRekz"));
+       // startActivity(browserIntent);
+    //}
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -99,21 +106,3 @@ public class Event extends Fragment {
     }
 }
 
-//share button
-public class Event2 extends AppCompatActivity{
-
-    Button bt;
-    @Override
-    protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_event);
-        bt=(Button)findViewById(R.id.button);
-        bt.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-               Intent myIntent = new Intent (Intent.ACTION_SEND);
-               myIntent.serTy
-            }
-        }
-    }
-}
